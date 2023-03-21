@@ -1,0 +1,8 @@
+.navbar{
+    background-color: rgba(53,127,126,255);
+  }
+  .navbar-brand{
+    height: 40px;
+    font-size: 40px;
+    color: white;
+  }

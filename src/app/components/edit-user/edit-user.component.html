@@ -1,0 +1,65 @@
+<div class="col-sm-4 mx-auto h-70 mt-4">
+
+    <div class="card">
+
+        <span class="titulo">EDITAR USUARIO</span>
+        <form [formGroup]="form" (ngSubmit)="editUser()">
+
+            <div class="mt-2 mb-3">
+                <label for="exampleFormControlInput1" class="etiquetas">NOMBRE</label>
+                <input formControlName="nombre" type="text" class="form-control colorInput" 
+                placeholder="Juan">
+                <div *ngIf="form.get('nombre')?.invalid && form.get('nombre')?.touched">
+                    <div *ngIf="form.get('nombre')?.hasError('required')">
+                        <p class="clave-error">Por favor, complete el campo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-2 mb-3">
+                <label for="exampleFormControlInput1" class="etiquetas">APELLIDO</label>
+                <input formControlName="apellido" type="text" class="form-control colorInput" 
+                placeholder="Perez">
+                <div *ngIf="form.get('apellido')?.invalid && form.get('apellido')?.touched">
+                    <div *ngIf="form.get('apellido')?.hasError('required')">
+                        <p class="clave-error">Por favor, complete el campo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-2 mb-3">
+                <label for="exampleFormControlInput1" class="etiquetas">TELEFONO</label>
+                <input formControlName="telefono" type="text" class="form-control colorInput" 
+                placeholder="+5659621749800">
+                <div *ngIf="form.get('telefono')?.invalid && form.get('telefono')?.touched">
+                    <div *ngIf="form.get('telefono')?.hasError('required')">
+                        <p class="clave-error">Por favor, complete el campo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label for="exampleFormControlInput1" class="etiquetas me-2">Comunas: </label>
+                <mat-form-field appearance="fill">
+                    <mat-label>Comuna</mat-label>
+                    <mat-select formControlName="comuna">
+                        <mat-option [value]="comuna.comuna.name" *ngFor="let comuna of listComunas" 
+                        [value]="comuna.comuna.name">
+                            {{comuna.comuna.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+            </div>
+
+            <div class="botones">
+                <button (click)="returnList()" class="btn btn-secondary float-start">VOLVER</button>
+                <button type="submit" [disabled]="form.invalid" class="btn btn-warning float-end">ACTUALIZAR</button>
+
+            </div>
+
+        </form>
+
+
+    </div>
+</div>

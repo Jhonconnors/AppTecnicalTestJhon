@@ -1,0 +1,67 @@
+form,  .card{
+    background: rgba(53,127,126,255);
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    padding: 6%;
+} 
+
+.btn{
+    font-family: Tahoma; font-size: 20px; font-style: normal;
+    font-weight: bold; 
+}
+
+.colorInput{
+    background-color:rgba(0,31,70,255);
+    border-radius: 12px;
+    color: aliceblue;
+    font-family: Tahoma; font-size: 19px; font-style: normal;
+}
+
+.form-control::placeholder{
+    color: rgba(191, 192, 193, 0.658);
+    font-size: 14px;
+}
+
+.etiquetas{
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+.botones{
+    
+    margin-bottom: 35px;
+}
+
+.titulo{
+    color: aliceblue;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2px;
+
+}
+
+.input-container {
+    position: relative;
+    display: block;
+  }
+  
+  .show-hide {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #ccc;
+  }
+  
+  .show-hide i:hover {
+    color: #333;
+  }
+
+  .clave-error{
+    color: rgb(159, 58, 58);
+    font-weight: bold;
+}
